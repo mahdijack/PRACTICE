@@ -4,85 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
-        type="text/css" />
+
+    <title>Dark Mode Test</title>
+
     <link rel="stylesheet" href="/src/style.css">
-    <title>Document</title>
 </head>
 
-<bod>
+<body class="flex justify-center flex-wrap">
 
-
-    <div class="group flex flex-col w-96 mx-auto mt-10 p-6 shadow-lg rounded-lg overflow-hidden">
-
-    <div class="overflow-hidden">
-        <img
-            class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
-            src="#"
-            alt="Product"
-        >
+    <div class="p-6 mt-6 w-fit bg-red-300 text-center rounded-2xl shadow-lg">
+        <div>
+            <h1 class="font-bold text-4xl">Sign up</h1>
+        </div>
+        <div class="w-auto h-auto group">
+            <form class="leading-10 mt-3">
+                <label for="fname">Name : <br></label><input
+                    class="text-center text-white border-2 rounded-3xl border-white leading-7 " id="fname" type="text">
+                <br>
+                <label for="fnum">Number : <br></label><input
+                    class="text-center text-white border-2 rounded-3xl border-white leading-7 " id="fnum" type="text">
+            </form>
+            <button class="rounded-2xl border-2 border-white mt-3 w-45 leading-10
+           hover:text-white hover:bg-gray-800 transition duration-300" onclick="CheckForm()" type="button">
+                Sign up
+            </button>
+        </div>
     </div>
 
-    <div class="mt-4">
-
-        <h1 class="font-bold text-2xl group-hover:text-blue-500 transition">
-            Product
-        </h1>
-
-        <p class="text-gray-600">
-            Learn Tailwind
-        </p>
-
-        <span class="font-bold">
-            $50
-        </span>
-
-    </div>
-
-    <button
-        class="w-full mt-4 bg-blue-500 text-white py-2 rounded-lg
-               hover:bg-blue-700 active:bg-blue-800
-               transition duration-300"
-    >
-        Buy Now
-    </button>
-
-</div>
-
-    <!-- <section class="signup bg-amber-300">
-        <div class="sign">
-            <div class="sign-head"></div>
-            <div class="sign-form">
-                <form action="">
-                    <label for="fname">نام و نام خانودگی :</label>
-                    <input type="text" name="fname" id="fname">
-                    <br>
-                    <label for="number">شماره همراه :</label>
-                    <input type="text" name="number" id="number">
-                </form>
-            </div>
-        </div>
-    </section>
-    <section class="Header">
-        <div class="logo">
-            <span>/</span>
-        </div>
-        <div class="navbar text-3xl bg-amber-50">
-            <ul class="menu">
-                <li>خونه</li>
-                <li>home2</li>
-                <li>home3</li>
-                <li>home4</li>
-                <li>home5</li>
-            </ul>
-        </div>
-        <div class="search"></div>
-    </section>
-    <section class="mid">
-
-    </section>
-    <section class="fotter"></section> -->
     <script src="/Javascripts/index.js"></script>
-    </body>
+
+</body>
 
 </html>

@@ -1,16 +1,53 @@
-import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite'
+// console.log("JavaScript is working!");
 
-export default defineConfig({
-  plugins: [
-    tailwindcss(),
-  ],
-})
+// const button = document.getElementById("themeBtn");
 
-// function checkForm(){
+// button.addEventListener("click", () => {
+//     console.log("BUTTON CLICKED");
 
-//     let name = document.getElementById("name");
-//     let number = document.getElementById("number");
+//     document.documentElement.classList.toggle("dark");
+// });
+
+
+function CheckForm(){
+    let name = document.getElementById("fname");
+    let number = document.getElementById("fnum"); 
+
+    let namevalue = name.value.trim();
+    let numbervalue = number.value.trim();
+
+    let Nameregex = /^[A-Za-zآ-ی\s]+$/;
+    let Numregex = /^\d{11}$/;
+
+    name.classList.remove("success","error");
+    number.classList.remove("success","error");
+
+    if (namevalue === "" || !Nameregex.test(namevalue)){
+        name.classList.add("error");
+        alert("لطفاً اسم را درست وارد کنید.");
+        return;
+    }else {
+        name.classList.add("success");
+    }
+    
+    if (numbervalue === "" || !Numregex.test(numbervalue)){
+        number.classList.add("error");
+        alert("لطفا شماره خود را صحیح وارد کنید");
+        return;
+    }else {
+        number.classList.add("success");
+
+        checkresult(namevalue , numbervalue);
+    }
+}
+
+
+
+
+// function CheckForm(){
+
+//     let name = document.getElementById("fname");
+//     let number = document.getElementById("fnum");
 
 //     let nameValue = name.value.trim();
 //     let numberValue = number.value.trim();
