@@ -41,7 +41,50 @@ function CheckForm(){
     }
 }
 
+function checkresult(name , number){
+    let pass = [
+        {name :"Seid Mahdi" , number:"09357893113"},
+        {name:"Hanie Ebrahimi" , number:"09228531181"}
+    ]
+    let fail = [
+        {name:"Seid Ali", number:"12345678912"},
+        {name:"سید حسین", number:"09128392748"},
+        {name:"علی پروین", number:"09368392748"}
+    ]
+    let Again = [
+        {name:"mahmood", number:"11111111111"},
+        {name:"jafari", number:"22222222222"},
+        {name:"مهشید سلیمانی", number:"33333333333"}
+    ]
 
+    let found = false
+    pass.forEach(function(student){
+        if(name === student.name && number === student.number){
+            alert("🎉 تبریک، شما قبول شدید.");
+            found = true ;
+        }
+    });
+
+    fail.forEach(function(student){
+        if(name === student.name && number === student.number){
+            alert("❌ متأسفانه شما رد شدید.");
+            found = true;
+        }
+    });
+    
+    Again.forEach(function(student){
+        if(name === student.name && number === student.number){
+            alert("📚 شما باید دوباره امتحان بدهید.");
+            found = true;
+        }
+    });
+
+    if(found === false){
+        alert("نام یا شماره شما در لیست وجود ندارد.");
+    }
+
+
+}
 
 
 // function CheckForm(){
@@ -83,68 +126,68 @@ function CheckForm(){
 // }
 
 
-function checkResult(name, number){
+// function checkResult(name, number){
 
-    let pass = [
-        {name:"Seid mahdi", number:"09357893113"},
-        {name:"سید مهدی", number:"09228531181"},
-        {name:"هانیه ابراهیمی", number:"09228531182"}
-    ];
+//     let pass = [
+//         {name:"Seid mahdi", number:"09357893113"},
+//         {name:"سید مهدی", number:"09228531181"},
+//         {name:"هانیه ابراهیمی", number:"09228531182"}
+//     ];
 
-    let fail = [
-        {name:"Seid Ali", number:"12345678912"},
-        {name:"سید حسین", number:"09128392748"},
-        {name:"علی پروین", number:"09368392748"}
-    ];
+//     let fail = [
+//         {name:"Seid Ali", number:"12345678912"},
+//         {name:"سید حسین", number:"09128392748"},
+//         {name:"علی پروین", number:"09368392748"}
+//     ];
 
-    let retry = [
-        {name:"mahmood", number:"11111111111"},
-        {name:"jafari", number:"22222222222"},
-        {name:"مهشید سلیمانی", number:"33333333333"}
-    ];
+//     let retry = [
+//         {name:"mahmood", number:"11111111111"},
+//         {name:"مهشید سلیمانی", number:"33333333333"},
+//         {name:"jafari", number:"22222222222"}
+//     ];
 
-    let found = false;
+//     let found = false;
 
-    pass.forEach(function(student){
+//     pass.forEach(function(student){
 
-        if(name == student.name && number == student.number){
+//         if(name == student.name && number == student.number){
 
-            alert("🎉 تبریک، شما قبول شدید.");
-            found = true;
+//             alert("🎉 تبریک، شما قبول شدید.");
+//             found = true;
 
-        }
+//         }
 
-    });
+//     });
 
-    fail.forEach(function(student){
+//     fail.forEach(function(student){
 
-        if(name == student.name && number == student.number){
+//         if(name == student.name && number == student.number){
 
-            alert("❌ متأسفانه شما رد شدید.");
-            found = true;
+//             alert("❌ متأسفانه شما رد شدید.");
+//             found = true;
 
-        }
+//         }
 
-    });
+//     });
 
-    retry.forEach(function(student){
+//     retry.forEach(function(student){
 
-        if(name == student.name && number == student.number){
+//         if(name == student.name && number == student.number){
 
-            alert("📚 شما باید دوباره امتحان بدهید.");
-            found = true;
+//             alert("📚 شما باید دوباره امتحان بدهید.");
+//             found = true;
 
-        }
+//         }
 
-    });
+//     });
 
-    if(found == false){
+//     if(found == false){
 
-        alert("نام یا شماره شما در لیست وجود ندارد.");
+//         alert("نام یا شماره شما در لیست وجود ندارد.");
 
-    }
+//     }
 
-}
+// }
 
 
 
