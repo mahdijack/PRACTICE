@@ -9,9 +9,9 @@
 // });
 
 
-function CheckForm(){
+function CheckForm() {
     let name = document.getElementById("fname");
-    let number = document.getElementById("fnum"); 
+    let number = document.getElementById("fnum");
 
     let namevalue = name.value.trim();
     let numbervalue = number.value.trim();
@@ -19,67 +19,67 @@ function CheckForm(){
     let Nameregex = /^[A-Za-zآ-ی\s]+$/;
     let Numregex = /^\d{11}$/;
 
-    name.classList.remove("success","error");
-    number.classList.remove("success","error");
+    name.classList.remove("success", "error");
+    number.classList.remove("success", "error");
 
-    if (namevalue === "" || !Nameregex.test(namevalue)){
+    if (namevalue === "" || !Nameregex.test(namevalue)) {
         name.classList.add("error");
         alert("لطفاً اسم را درست وارد کنید.");
         return;
-    }else {
+    } else {
         name.classList.add("success");
     }
-    
-    if (numbervalue === "" || !Numregex.test(numbervalue)){
+
+    if (numbervalue === "" || !Numregex.test(numbervalue)) {
         number.classList.add("error");
         alert("لطفا شماره خود را صحیح وارد کنید");
         return;
-    }else {
+    } else {
         number.classList.add("success");
 
-        checkresult(namevalue , numbervalue);
+        checkresult(namevalue, numbervalue);
     }
 }
 
-function checkresult(name , number){
+function checkresult(name, number) {
     let pass = [
-        {name :"Seid Mahdi" , number:"09357893113"},
-        {name:"Hanie Ebrahimi" , number:"09228531181"}
+        { name: "Seid Mahdi", number: "09357893113" },
+        { name: "Hanie Ebrahimi", number: "09228531181" }
     ]
     let fail = [
-        {name:"Seid Ali", number:"12345678912"},
-        {name:"سید حسین", number:"09128392748"},
-        {name:"علی پروین", number:"09368392748"}
+        { name: "Seid Ali", number: "12345678912" },
+        { name: "سید حسین", number: "09128392748" },
+        { name: "علی پروین", number: "09368392748" }
     ]
     let Again = [
-        {name:"mahmood", number:"11111111111"},
-        {name:"jafari", number:"22222222222"},
-        {name:"مهشید سلیمانی", number:"33333333333"}
+        { name: "mahmood", number: "11111111111" },
+        { name: "jafari", number: "22222222222" },
+        { name: "مهشید سلیمانی", number: "33333333333" }
     ]
 
     let found = false
-    pass.forEach(function(student){
-        if(name === student.name && number === student.number){
+    pass.forEach(function (student) {
+        if (name === student.name && number === student.number) {
             alert("🎉 تبریک، شما قبول شدید.");
-            found = true ;
+            found = true;
         }
     });
 
-    fail.forEach(function(student){
-        if(name === student.name && number === student.number){
+    fail.forEach(function (student) {
+        if (name === student.name && number === student.number) {
             alert("❌ متأسفانه شما رد شدید.");
             found = true;
         }
     });
-    
-    Again.forEach(function(student){
-        if(name === student.name && number === student.number){
+
+    Again.forEach(function (student) {
+        if (name === student.name && number === student.number) {
             alert("📚 شما باید دوباره امتحان بدهید.");
             found = true;
         }
     });
 
-    if(found === false){
+    if (found === false) {
         alert("نام یا شماره شما در لیست وجود ندارد.");
     }
 
@@ -95,24 +95,56 @@ function checkresult(name , number){
 // }
 
 
-function myfunction(){
-    
+function myfunction() {
+
     let massage = document.getElementById("result");
-    let x = document.getElementById("Demo").value ;
+    let x = document.getElementById("Demo").value;
 
 
-    
-    try
-    {
-        if(x == "")throw "epmty";
+
+    try {
+        if (x == "") throw "epmty";
         else {
             massage.innerHTML = "somthing"
         }
-        
-    }catch(err){
-        massage.innerHTML = "this input is " + err ;
+
+    } catch (err) {
+        massage.innerHTML = "this input is " + err;
+    }
+    finally {
+        document.getElementById("Demo").value = "";
+    }
+
+}
+
+
+
+
+
+
+
+
+
+async function getUsers() {
+    try {
+        const response = await fetch("/api/users");
+
+        if (!response.ok) {
+            throw new Error("خطا در دریافت اطلاعات");
+        }
+
+        const data = await response.json();
+
+        console.log(data);
+
+    } catch (error) {
+        console.error(error.message);
+
+    } finally {
+        console.log("درخواست تمام شد");
     }
 }
+getUsers();
 
 // function CheckForm(){
 
