@@ -86,6 +86,29 @@ function checkresult(name , number){
 
 }
 
+// let Asami = ["mahdi", "jafar", "hassan", "davood"];
+// let shomarande = 0;
+
+// while(shomarande < Asami.length){
+//     document.getElementById("result").innerHTML += Asami[shomarande]+" </br>";
+//     shomarande++;
+// }
+
+
+function myfunction(){
+    
+    let massage = document.getElementById("result");
+    let x = document.getElementById("Demo").value ;
+
+
+    
+    try
+    {
+        if(x == "")throw ;
+    }catch(err){
+        alert("not working")
+    }
+}
 
 // function CheckForm(){
 
