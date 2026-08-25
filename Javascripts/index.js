@@ -104,9 +104,13 @@ function myfunction(){
     
     try
     {
-        if(x == "")throw ;
+        if(x == "")throw "epmty";
+        else {
+            massage.innerHTML = "somthing"
+        }
+        
     }catch(err){
-        alert("not working")
+        massage.innerHTML = "this input is " + err ;
     }
 }
 
